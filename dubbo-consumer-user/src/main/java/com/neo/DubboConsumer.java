@@ -2,6 +2,7 @@ package com.neo;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import com.alibaba.dubbo.rpc.service.EchoService;
 import com.neo.service.IProcessData;
 
 /**
@@ -19,7 +20,17 @@ public class DubboConsumer
 
     		IProcessData demoService = (IProcessData) context.getBean("demoService");
 
-    		System.out.println(demoService.hello("world"));
+    		EchoService echoService = (EchoService)demoService;
+    		
+    		String status = (String) echoService.$echo("OK");
+    		System.out.println(status);
+    		for (int i = 0; i < Integer.MAX_VALUE; i++) {
+				
+    			System.out.println("========================");
+    			System.out.println(demoService.hello("world"));
+    			
+    			Thread.sleep(2000);
+			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

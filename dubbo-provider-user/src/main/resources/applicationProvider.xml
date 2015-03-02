@@ -10,8 +10,11 @@
 
 	<dubbo:application name="hello-world" />
 
-	<!-- 注冊地址 -->
-	<dubbo:registry address="multicast://224.5.6.7:1234" />
+	<!-- 使用zookeeper注册中心暴露服务地址 -->
+	<dubbo:registry protocol="zookeeper" address="${dubbo.registry.address}" />
+
+	<!-- 用dubbo协议在20880端口暴露服务 -->
+	<dubbo:protocol name="dubbo" port="${dubbo.protocol.port}" />
 
 	<!-- Service interface Concurrent Control -->
 	<dubbo:service interface="com.neo.service.IProcessData"	ref="demoService" executes="10" />
