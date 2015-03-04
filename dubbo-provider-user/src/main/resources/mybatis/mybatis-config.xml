@@ -38,10 +38,12 @@
 	<!-- 类型别名是为 Java类型命名一个短的名字。 它只和 XML配置有关,只用来减少类完全 限定名的多余部分 -->
 	<typeAliases>
 		<typeAlias alias="PmsUser" type="com.neo.entity.PmsUser" />
+		<typeAlias alias="TOrder" type="com.neo.entity.TOrder" />
 	</typeAliases>
 
 	<mappers>
 		<mapper resource="mybatis/mapper/PmsUser.Mapper.xml" />	
+		<mapper resource="mybatis/mapper/TOrder.Mapper.xml" />	
 	</mappers>
 
 </configuration>
