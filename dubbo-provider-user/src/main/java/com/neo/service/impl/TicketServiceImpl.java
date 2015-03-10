@@ -24,7 +24,7 @@ public class TicketServiceImpl implements ITicketService {
 			if(max > stat.getVersion()) {
 				
 			}
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
