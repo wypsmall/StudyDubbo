@@ -37,7 +37,7 @@ public class TestOrderDao extends BaseTestCase {
 		System.out.println(res);
 		
 		order.setOrderId("D"+System.currentTimeMillis());
-		order.setUserId(UUID.randomUUID().toString()+"d");
+		order.setUserId(UUID.randomUUID().toString()+"");
 		res = orderDao.insert(order);
 		
 		assertEquals(1, res);

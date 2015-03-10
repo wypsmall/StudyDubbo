@@ -17,4 +17,5 @@
 	<dubbo:consumer timeout="5000" />
 	<!-- which service to consume? -->
 	<dubbo:reference id="demoService" interface="com.neo.service.IProcessData"/>
+	<dubbo:reference id="ticketService" interface="com.neo.service.ITicketService" loadbalance="roundrobin"/>
 </beans> 
