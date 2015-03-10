@@ -24,13 +24,15 @@ public class TicketServiceImpl implements ITicketService {
 			if(max > stat.getVersion()) {
 				
 			}
-			//zk.
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		return qn;
 	}
-
+	/*
+	 * 使用乐观锁原理
+	 */
 	public String getTicketNo(Integer queueNo) {
 		String tickno = null;
 		try {
