@@ -24,7 +24,7 @@ public class UserGetTicket {
 					@Override
 					public void run() {
 						try {
-		    				System.out.println(ticketService.getTicketNo(0));
+		    				System.out.println(ticketService.getTicketNo("uid00001"));
 		    				Thread.sleep(50);
 						} catch (Exception e) {
 							
