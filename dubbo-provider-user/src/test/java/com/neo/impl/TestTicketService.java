@@ -12,6 +12,6 @@ public class TestTicketService extends BaseTestCase {
 	}
 	
 	public void testSaveInfo() {
-		ticketService.getTicketNo(0);
+		ticketService.getTicketNo("uid0001");
 	}
 }
